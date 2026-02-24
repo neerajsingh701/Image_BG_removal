@@ -2,11 +2,25 @@
 
 import { useContext } from "react"
 import { AppContext } from "../context/AppContext"
+import { useNavigate } from "react-router-dom"
+
 
 
 const Upload = () => {
 
-  const { removeBg } = useContext(AppContext)
+  const { removeBg, utoken } = useContext(AppContext)
+  const navigate = useNavigate()
+
+  // onchanging condition
+  const handleUpload = (file) => {
+    if (!utoken) {
+      navigate("/login");
+      return
+    }
+
+    removeBg(file);
+
+  }
 
 
   return (
@@ -16,7 +30,7 @@ const Upload = () => {
       </h1>
 
       <div className="text-center mb-24">
-        <input onChange={e => removeBg(e.target.files[0])} type="file" id="upload2" accept="image/*" hidden />
+        <input onChange={(e) => handleUpload(e.target.files[0])} type="file" id="upload2" accept="image/*" hidden />
         <label htmlFor="upload2" className="inline-flex gap-3 px-8 py-3 md:px-6 md:py-2.5 rounded-full cursor-pointer  bg-linear-to-r from-blue-600 to-fuchsia-500 m-auto hover:scale-105 transition-all duration-700 text-white">
           Upload Image
         </label>
