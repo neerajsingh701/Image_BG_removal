@@ -65,16 +65,7 @@ const Header = () => {
 
 
       {/* Right sid e  */}
-      <div className="w-full lg:w-1/2 h-64 lg:h-auto overflow-hidden rounded-3xl">
-        <video
-          src={video}           // yahan video ka path ya import karega
-          className="rounded-3xl bg-transparent scale-125"
-          autoPlay
-          muted
-          loop
-          controls             // agar user ko pause/play chahiye
-        />
-      </div>
+
 
     </div>
   )
