@@ -17,7 +17,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: [
+        "http://localhost:5173",
+        "https://image-bg-removal-fdfkcm8bt-neerajroy521s-projects.vercel.app"
+    ],
     credentials: true
 }));
 
@@ -30,7 +33,7 @@ app.use('/api/images', imageRouter);
 // just checking for the my backend is running or not 
 // sending response in browser
 app.get("/", (req, res) => {
-  res.send("API Running 🚀");
+    res.send("API Running 🚀");
 });
 
 
