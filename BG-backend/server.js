@@ -19,7 +19,7 @@ const PORT = process.env.PORT || 3000;
 app.use(cors({
     origin: [
         "http://localhost:5173",
-        "https://image-bg-removal-fdfkcm8bt-neerajroy521s-projects.vercel.app"
+        "https://image-bg-removal-tau.vercel.app"
     ],
     credentials: true
 }));
