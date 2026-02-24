@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+body {
+    /* background-color: #09162e; */
+    background: linear-gradient(#cad0ff    , #e3e3e3);
+}
+
+.slider {
+    appearance: none;
+    -webkit-appearance: none;
+    height: 100%;
+    background: transparent;
+
+
+}
+
+.slider::-webkit-slider-thumb {
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+
+}
