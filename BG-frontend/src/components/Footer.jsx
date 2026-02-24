@@ -16,6 +16,8 @@ const Footer = () => {
         <a href="https://www.linkedin.com/in/neerajsingh521/">
           <img src={assets.linkedin_logo1} alt="linkedin" className=' w-16 h-16 cursor-pointer transition-transform duration-700  ease-out hover:scale-110 select-none' />
         </a>
+
+
         <a href="https://github.com/neerajsingh701">
           <img src={assets.github_logo1} alt="github" className=' w-16 h-16 cursor-pointer transition-transform duration-700  ease-out hover:scale-110 select-none' />
         </a>
