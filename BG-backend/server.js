@@ -27,6 +27,11 @@ app.use('/api/users', userRouter);
 app.use('/api/images', imageRouter);
 
 
+// just checking for the my backend is running or not 
+// sending response in browser
+app.get("/", (req, res) => {
+  res.send("API Running 🚀");
+});
 
 
 app.listen(PORT, () => {
