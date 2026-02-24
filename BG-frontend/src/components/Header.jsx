@@ -10,7 +10,7 @@ const Header = () => {
 
   // onchanging condition
   const handleUpload = (file) => {
-    if (!utoken) {
+    if (!utoken || utoken === "null" || utoken === "undefined") {
       navigate("/login");
       return
     }
@@ -38,10 +38,27 @@ const Header = () => {
         </p>
 
         <div>
-          <input onChange={(e) => handleUpload(e.target.files[0])} type="file" id="upload1" accept="image/*" hidden />
-          <label htmlFor="upload1" className="inline-flex gap-3 px-8 py-3.5 md:px-6 md:py-2.5 rounded-full cursor-pointer bg-linear-to-r font-rubik from-blue-600 to-fuchsia-500 m-auto hover:scale-105 transition-all duration-700 text-white">
+          <input
+            onChange={(e) => handleUpload(e.target.files[0])}
+            type="file"
+            id="upload1"
+            accept="image/*"
+            hidden
+          />
+
+
+          <button
+            onClick={() => {
+              if (!utoken) {
+                navigate("/login")
+              }
+              else {
+                document.getElementById("upload1").click();
+              }
+            }}
+            className="inline-flex gap-3 px-8 py-3.5 md:px-6 md:py-2.5 rounded-full cursor-pointer bg-linear-to-r font-rubik from-blue-600 to-fuchsia-500 m-auto hover:scale-105 transition-all duration-700 text-white">
             <span>Upload Image</span>
-          </label>
+          </button>
         </div>
       </div>
 
