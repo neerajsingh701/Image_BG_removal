@@ -1,6 +1,6 @@
 
 
-import { testimonialsData } from "../assets/assets/assets"
+import { testimonialsData } from "../assets/assets/assets.js"
 
 
 const Testimonial = () => {
