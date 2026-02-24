@@ -2,6 +2,7 @@
 import { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import { useNavigate } from 'react-router-dom'
+import video from '../assets/assets/video.mp4'
 
 const Header = () => {
 
@@ -64,9 +65,15 @@ const Header = () => {
 
 
       {/* Right sid e  */}
-      <div className="w-full max-w-lg">
-        {/* <video src={video} className="rounded-3xl bg-transparent" autoPlay muted loop></video> */}
-
+      <div className="w-full lg:w-1/2 h-64 lg:h-auto overflow-hidden rounded-3xl">
+        <video
+          src={video}           // yahan video ka path ya import karega
+          className="rounded-3xl bg-transparent scale-125"
+          autoPlay
+          muted
+          loop
+          controls             // agar user ko pause/play chahiye
+        />
       </div>
 
     </div>
