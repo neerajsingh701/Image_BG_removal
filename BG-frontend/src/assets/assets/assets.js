@@ -15,8 +15,8 @@ export const assets = {
     remove_icon,
     download_icon,
     linkedin_logo,
-    linkedin_logo1:"https://img.icons8.com/3d-fluency/94/linkedin--v1.png" ,
-    github_logo1 : "https://img.icons8.com/3d-fluency/94/github-logo.png",
+    linkedin_logo1: "https://img.icons8.com/3d-fluency/94/linkedin--v1.png",
+    github_logo1: "https://img.icons8.com/3d-fluency/94/github-logo.png",
     twitter_logo1: "https://img.icons8.com/3d-fluency/94/twitter-circled--v1.png"
 }
 
