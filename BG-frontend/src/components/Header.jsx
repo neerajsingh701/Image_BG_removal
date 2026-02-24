@@ -2,7 +2,6 @@
 import { useContext } from 'react'
 import { AppContext } from '../context/AppContext'
 import { useNavigate } from 'react-router-dom'
-import video from '../assets/assets/video.mp4'
 
 const Header = () => {
 
