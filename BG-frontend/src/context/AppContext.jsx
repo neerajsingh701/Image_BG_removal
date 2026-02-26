@@ -18,7 +18,7 @@ const AppContextProvider = ({ children }) => {
   const [image, setImage] = useState(false);
   const [resultImage, setResultImage] = useState(false);
 
-  const backendURL = 'http://localhost:3000'
+  const backendURL = import.meta.env.VITE_BACKEND_URL
 
 
   // fetching user info on reload if token exsts 
