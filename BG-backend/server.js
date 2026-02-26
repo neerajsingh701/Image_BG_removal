@@ -11,10 +11,12 @@ import imageRouter from './routes/imageRoute.js';
 
 dotenv.config();
 
-connectDB();
 const app = express();
 
-const PORT = process.env.PORT || 3000;
+// modifyed for starting thr database
+
+
+
 
 app.use(cors({
     origin: [
@@ -37,9 +39,23 @@ app.get("/", (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+const startServer = async () => {
+    try {
+        connectDB();
+        const PORT = process.env.PORT || 3000;
+        app.listen(PORT, () => {
+            console.log(`Server is running on port ${PORT}`);
+        });
+
+
+    } catch (error) {
+        console.log("Failed to start server", error)
+        process.exit(1);
+
+    }
+}
+
+startServer();
 
 
 //YNZ5Sgqdnq0JP0qf
